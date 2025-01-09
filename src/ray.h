@@ -1,20 +1,20 @@
-#pragma "once"
+#pragma once
 
 #include "vec3.h"
 
 class ray {
 private: 
-    point3 origin;
-    vec3 direction;
+    point3 orig;
+    vec3 dir;
 public:
     ray() {}
 
-    ray(const point3& orig, const vec3& dir) : origin(orig), direction(dir) {}
+    ray(const point3& origin, const vec3& direction) : orig(origin), dir(direction) {}
 
-    const point3& origin() const {return origin;}
-    const point3& direction() const {return direction;}
+    const point3& origin() const {return orig;}
+    const point3& direction() const {return dir;}
 
     point3 at(double t) {
-        return origin + t * direction;
+        return orig + t * dir;
     }
 };
