@@ -22,5 +22,6 @@ list(APPEND SOURCES ${LIB_FILES})
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 # Add include directories for headers
+add_library(stb_image STATIC libs/stb_image.h)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_include_directories(${PROJECT_NAME} PUBLIC libs)
