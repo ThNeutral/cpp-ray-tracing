@@ -2,7 +2,6 @@
 
 #include "vec3.h"
 #include "interval.h"
-#include "../libs/stb_image.h"
 
 using color = vec3;
 
