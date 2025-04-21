@@ -10,10 +10,6 @@ set(SOURCES "${CMAKE_SOURCE_DIR}/main.cpp")
 file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/*.cpp")
 list(APPEND SOURCES ${SRC_FILES})
 
-# set(HEADERS
-#     include/example.h
-# )
-
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
